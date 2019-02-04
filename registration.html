@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" language="javascript">
+function verify()
+	{
+		if(!name())
+		 return false;
+
+		if(!pass())
+		 return false;
+		
+		else if(!roll())
+		 return false;
+		
+
+		else if(!contact())
+		 return false;
+
+		else if(!branch())
+		 return false;
+
+		else if(!passing())
+		 return false;
+		
+		else if(!email())
+		 return false;
+	return true;
+	}
+
+ function pass()
+{
+
+        var val=document.getElementById("pass").value;
+	var len=val.length;
+
+	if(val==0)
+	{
+	alert("Enter your password");
+	document.getElementById("pass").focus;
+	return false;
+	}
+	if(len<5)
+	{
+	alert("Password should 5 character");
+	document.getElementById("pass").focus;
+	return false;
+	}
+
+	return true;
+}
+
+ function passing()
+{
+
+        var val=document.getElementById("passing").value;
+	if(val==0)
+	{
+	alert("Enter your Year of Passing");
+	document.getElementById("passing").focus;
+	return false;
+	}
+
+	return true;
+}
+
+ function email()
+{
+	var val=document.getElementById("email").value;
+	var len=val.length;
+	if(len==0)
+	{
+	alert("Enter Your Email Id");
+	document.getElementById("email");
+	return false;
+	}
+	return true;
+}
+
+ function branch()
+{
+	var val=document.getElementById("branch").value;
+	if(val=="")
+	{
+	alert("Enter Your Branch");
+	document.getElementById("branch");
+	return false;
+	}
+	return true;
+}
+
+ function contact()
+ {
+	var val=document.getElementById("mob").value;
+	var len=val.length;
+	if(len==0)
+	{
+	alert("Enter Valid 10 digit Mobile Number");
+	document.getElementById("mob").focus();
+	return false;
+	}
+	
+	else if(len>10)
+	{
+	 alert("Enter Valid 10 digit Contact Number");
+	 document.getElementById("mob").focus;
+	 return false;
+	}
+	else if(len<10)
+	{
+	 alert("Enter Valid 10 digit Contact Number");
+	 document.getElementById("mob").focus;
+	 return false;
+	}
+	var flag=0;
+	for(i=0;i<len;i++)
+	{
+	var space= val.charAt(i)
+	if(space==" ")
+	flag++;
+	}
+	if(flag>0)
+	{
+	alert("Enter Valid 10 digit Contact number");
+	document.getElementById("mob").focus;
+	return false;
+	}
+	if(val.charAt(0)==0)
+	{
+	alert("Invalid Contact Number");
+	document.getElementById("mob").focus;
+	return false;
+	}
+	return true;   
+}	
+
+ function name()
+ {
+	var val=document.getElementById("name").value;
+	var len=val.length;
+	if(len==0)
+	{
+	 alert("Enter Your Name.");
+	 document.getElementById("name").focus();
+	 return false;
+	}
+	else if(len>40)
+	 {
+	  prompt("Name is too long");
+	  document.getElementById("name").focus;
+	  return false;
+	 }
+	return true;
+ }
+ 
+ function roll()
+ {
+	var val=document.getElementById("roll").value;
+	var len=val.length;
+	if(len==0)
+	{
+	 alert("Enter Roll Number");
+	 document.getElementById("roll").focus;
+	 return false;
+	}
+	else if(len>10)
+	{
+	 alert("Enter Valid 10 digit Roll Number");
+	 document.getElementById("roll").focus;
+	 return false;
+	}
+	else if(len<10)
+	{
+	 alert("Enter Valid 10 digit Roll Number");
+	 document.getElementById("roll").focus;
+	 return false;
+	}
+   return true;
+ }
+
+</script>
+<style>
+body{
+//background:lightpink;
+height:600px;
+background:black;
+
+width:1200px;    
+padding-left:5%;
+padding-right:5%px;
+padding-top:5%px;
+padding-bottom:5%px;
+//margin:5% 5% 5% 5%;
+/margin-bottom:5px;
+//margin-top:10px;
+//margin-left:100px
+font-weight:bold;
+
+}
+
+
+input[type=date] {
+    //width: 100%;
+    background-color: white;
+    padding: 12px 30px 12px 30px;
+    margin: 8px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+	box-sizing: border-box;
+}
+
+select{
+    //width: 100%;
+    padding: 12px 65px 12px 65px;
+    margin: 8px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type=password] {
+    //width: 100%;
+    padding: 12px 20px;
+    margin: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    //width: 100%;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    //width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+input[type=reset] {
+    //width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover {
+    background-color: #45a049;
+}
+
+
+ #back{
+height:500px;
+width:1050px;    
+padding-left:50px;
+padding-right:50px;
+padding-top:50px;
+padding-bottom:50px;
+margin:60px 100px 60px 100px;
+//margin-bottom:5px;
+//margin-top:10px;
+//margin-left:100px
+font-weight:bold;
+color:#ffffff;
+//background:#24BFB6;
+background:seagreen;
+border-radius:50px 50px 50px 50px;
+
+}
+#menu
+{
+margin:50px 0px 0px 0px;
+height:50px;
+width:1000px;
+background-color:white;
+border-radius:20px 20px 0px 0px;
+border:1px solid white;
+}
+#menu ul
+{
+list-style:none;
+
+}
+#menu ul li
+{
+display:inline;
+//border:1px solid;
+padding:20px;
+}
+#menu ul li a
+{
+color:orange;
+text-decoration:none;
+}
+#menu ul li a:hover
+{
+color:green;
+}
+
+
+ 
+#front{
+//height:50px;
+width:900px;
+margin:0px 0px 50px 0px;
+
+padding-left:50px;
+padding-right:50px;
+padding-top:50px;
+padding-bottom:50px;
+//margin-bottom:10px;
+//margin-top:5px;
+font-weight:bold;
+color:#ffffff;
+background:grey;
+border-radius:0px 0px 50px 50px;
+
+
+}
+img.background {
+   //width: 100%;
+   height: 100%;
+   position: fixed;
+   left: 0px;
+   top: 0px;
+   z-index: -1;
+   -webkit-filter: blur(90px); /* Safari 6.0 - 9.0 */
+   filter: blur(90px);
+}
+</style>
+<body align="center">
+<div id="back" align="center">
+  <div id="menu" align="center">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Register</a></li>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  </div>
+<div id="front" align="center">
+  <form action="registration.jsp" method="post" onsubmit="return verify()">
+    
+    <input type="text" id="name" name="name" placeholder="Your name..">&nbsp&nbsp&nbsp&nbsp
+    
+    <input type="text" id="roll" name="roll" placeholder="Your  Roll no.."><br>
+
+    <input type="text" id="mob" name="mob" placeholder="Your  Contact no..">&nbsp&nbsp&nbsp&nbsp   
+
+    <input type="text" id="email" name="email" placeholder="Your email.."><br>
+        <select id="branch" name="branch">
+	<option value="">Branch</option>
+	<option value="CSE">CSE</option>
+	<option value="ME">ME</option>
+	<option value="CIVIL">CIVIL</option>
+	<option value="EE">EE</option>
+	<option value="EN">EN</option>
+	<option value="IT">IT</option>
+	<option value="EC">EC</option>	
+    </select>&nbsp&nbsp&nbsp&nbsp
+
+    <input type="date" id="passing" name="passing"><br>
+    <input type="password" id="pass" name="pass" placeholder="password">&nbsp&nbsp&nbsp
+    <input type="submit" value="Submit">&nbsp&nbsp<input type="reset" value="Reset">
+  </form>
+</div>
+</div>
+<img class="background" src="1.jpg" alt="background" width=100% height=100%>
+</body>
+</html>
+
