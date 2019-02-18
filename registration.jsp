@@ -73,7 +73,7 @@ String t=email;
 
 				protected PasswordAuthentication getPasswordAuthentication() {
 
-					return new PasswordAuthentication("tripathivenkteshwar6@gmail.com","123catmat");
+					return new PasswordAuthentication("youremail@gmail.com","password");
 
 				}
 
@@ -83,7 +83,7 @@ String t=email;
 		
 			Message message = new MimeMessage(s);
 
-			message.setFrom(new InternetAddress("tripathivenkteshwar6@gmail.com"));
+			message.setFrom(new InternetAddress("youremail@gmail.com"));
 
 			message.setRecipients(Message.RecipientType.TO,
 
@@ -96,11 +96,6 @@ String t=email;
 
 			Transport.send(message);
 
-
-
-
-		
-	
             
 int x=ps.executeUpdate();
 if(x==1)
